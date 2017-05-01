@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+
+  <!-- We link our html to the Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<style type="text/css">
+   body { 
+          background-image: url("assets/images/background.jpg")  !important;
+ } 
+   .container{
+    background-color: #80baf9 !important;
+
+   }
+</style>
+
+  <!-- Container Div -->
+  <div class="container">
+
+
+    <!-- Jumbotron element -->
+    <div class="jumbotron">
+
+      <!-- centered text -->
+      <center><img id="banner" src="assets/images/banner.jpg"></center>
+      <h1 class="text-center"><strong>World Map</strong></h1>
+      <h2 class="text-center">A Classic Hangman Game!</h2>
+      <h3 class="text-center">Expand your knowledge of spelling!!</h3>
+      <h4 class="text-center">Sherry Bao</h3>
+
+
+    </div>
+
+    <!-- a Bootstrap row with columns -->
+    <div class="row">
+
+      <!-- At large+ screens takes up first half width (6/12) -->
+      <div class="col-lg-6">
+
+        <!-- centered image with thumbnail rules -->
+        <img class="img thumbnail center-block" src="http://legacy.nerdywithchildren.com/wp-content/uploads/2013/06/ComfyChildKeyboard.jpg" alt="KidComputer" width="50%">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, molestiae modi accusantium animi magnam veniam, impedit asperiores sint consequuntur debitis fugit quibusdam dolor, iusto sed porro ab minus voluptatibus amet.</p>
+
+
+
+
+      </div>
+
+
+
+      <!-- At large+ screens takes up second half width (6/12) -->
+      <div class="col-lg-6">
+        <img class="img thumbnail center-block" src="https://download.unsplash.com/photo-1429051883746-afd9d56fbdaf" alt="LittleCoder" width="50%">
+
+
+<main class="w3-container constrain">
+    <div class="w3-row">
+        <div class="w3-half w3-input">
+<p id="guesses"><strong>You have 26 chances to guess letters!</strong></p>
+<p id="game">&nbsp;</p>
+
+<form name="form1">
+<label class ="w3-label ">Input a letter here, then click guess
+    <input name="letter" id="letter" type="text" size="3" maxlength="3"> </label>
+<input type="button" name="submit" id="submit" value="Guess!"></form>
+        </div>
+
+    </div>
+</main>
+
+        <div class='input-area'>
+          <input id='letter-input' type='text' maxlength='1'/>
+        </div>
+
+
+  <script src="assets/javascript/game.js"></script>
+
+
+</body>
+
+</html>
