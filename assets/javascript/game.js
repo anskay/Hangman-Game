@@ -1,9 +1,12 @@
+
+
+// ========================ORIGINAL CODE=======================//
 var $  = function (id) {
     return document.getElementById(id);
 }
 
 //declare variables
-    var game = ['China','Japan','United States','Bangladesh', 'Burundi', 'Cambodia', 'Finland', 'Israel', 'Mozambique','Philippines']
+    var game = ['CHINA','JAPAN','UNITEDSTATES','BANGLADESH', 'BURUNDI', 'CAMBODIA', 'FINLAND', 'ISRAEL', 'MOZAMBIQUE','PHILIPPINES']
     var choice = Math.floor(Math.random()*10);
     var answer = game[choice];
     var myLength = answer.length;
@@ -26,6 +29,15 @@ var setup = function()
     output ="";
 }
 
+    else {
+        display[i] = "_ ";
+
+        // wrongLetters.push(letter);
+        document.getElementById("wrongGuesses").innerHTML = output;
+    output ="";
+}
+    
+
 //loop through each answer to see if match guessed answer
 var submit = function()
 {    output = "";
@@ -33,11 +45,13 @@ var submit = function()
     $("letter").value ="";
 
     for (var c= 0; c< answer.length; c++)
-    {if (userLetter.toUpperCase() == letters[c])
+    {
+        if (userLetter.toUpperCase() == letters[c])
         {display[c] = userLetter.toUpperCase();
         win--;}
         output = output + display[c] + " ";
     }
+
 
     //redisplay output
     document.getElementById("game").innerHTML = output;
@@ -62,4 +76,16 @@ window.onload = function()
     $("submit").onclick = submit;
 }
 
-$('#letter-input').keyup( doKeypress );
+
+// ===========ignore below, unsuccessful attempts=======
+
+// function roundComp(){
+//     console.log("Win Count: "+winCount+ " |Loss Count: "+lossCount)
+// }
+
+// document.onkeyup = function (event){
+//     var letterGuessed = String.fromCharCode(event.keyCode).toUpperCase();
+//     document.innerHTML = letterGuessed;
+// }
+
+

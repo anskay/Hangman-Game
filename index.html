@@ -47,10 +47,18 @@
       <!-- At large+ screens takes up first half width (6/12) -->
       <div class="col-lg-6">
 
-        <!-- centered image with thumbnail rules -->
-        <img class="img thumbnail center-block" src="http://legacy.nerdywithchildren.com/wp-content/uploads/2013/06/ComfyChildKeyboard.jpg" alt="KidComputer" width="50%">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, molestiae modi accusantium animi magnam veniam, impedit asperiores sint consequuntur debitis fugit quibusdam dolor, iusto sed porro ab minus voluptatibus amet.</p>
-
+        <!-- left panel of page -->
+        <img id="leftpanel" src="assets/images/leftpanel.jpg" width="400">
+          <div class="panel panel-default">
+              <div class="panel-body">
+                  Win Counter: <span id="winCounter"> 0</span>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-body">
+                  Loss Counter: <span id="lossCounter"> 0</span>
+              </div>
+          </div>
 
 
 
@@ -58,19 +66,19 @@
 
 
 
-      <!-- At large+ screens takes up second half width (6/12) -->
+      <!-- right panel of page (6/12) -->
       <div class="col-lg-6">
-        <img class="img thumbnail center-block" src="https://download.unsplash.com/photo-1429051883746-afd9d56fbdaf" alt="LittleCoder" width="50%">
+        <img id="rightpanel" src="assets/images/ready.jpg" width="200">
 
 
-<main class="w3-container constrain">
-    <div class="w3-row">
-        <div class="w3-half w3-input">
+<main class="container constrain">
+    <div class="row">
+        <div class="half input">
 <p id="guesses"><strong>You have 26 chances to guess letters!</strong></p>
 <p id="game">&nbsp;</p>
 
-<form name="form1">
-<label class ="w3-label ">Input a letter here, then click guess
+<form name="form1"> 
+<label class ="label ">Input a letter here, then click guess
     <input name="letter" id="letter" type="text" size="3" maxlength="3"> </label>
 <input type="button" name="submit" id="submit" value="Guess!"></form>
         </div>
@@ -78,9 +86,16 @@
     </div>
 </main>
 
-        <div class='input-area'>
-          <input id='letter-input' type='text' maxlength='1'/>
-        </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+        Wrong Guessed:<span id="wrongGuesses"></span>
+    </div>
+  </div>
+
+        <br>
+        </br>
+        <br>
+        </br>
 
 
   <script src="assets/javascript/game.js"></script>
